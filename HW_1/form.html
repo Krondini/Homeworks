@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Include jQuery -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title> Form </title>
+</head>
+<body>
+	<div class="container">
+		<h4 class="display-4"> Submission Form </h4>
+		<div class="form-group">
+			<label for="user"> Name: </label>
+			<input type="text" class="form-control" id="user" placeholder="Enter a Name">
+		</div>
+		<div class="form-group">
+			<label for="email"> Email address: </label>
+			<input type="text" class="form-control" id="email" placeholder="Enter email address">
+		</div>
+		<div class="form-group">
+			<label for="pwd"> Password: </label>
+			<input type="text" class="form-control" id="pwd" placeholder="Enter a Password">
+		</div>
+		<br>
+		<p class="font-weight-bold"> Gender </p>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input type="radio" class="form-check-input" name="optradio">Male
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input type="radio" class="form-check-input" name="optradio">Female
+			</label>
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input type="radio" class="form-check-input" name="optradio">Other
+			</label>
+		</div>
+		<br>
+		<!-- Security Question -->
+		<p class="font-weight-bold"> Security Question </p>
+		<div class="form-group">
+			<label for="security"> Select one: </label>
+			<select class="form-control" id="security">
+				<option> Name of your favorite pet? </option>
+				<option> Street you grew up on? </option>
+				<option> Mother's maiden name? </option>
+				<option> Name of your favorite TA for Software Dev </option>
+			</select>
+		</div>
+		<br>
+		<div class="form-group">
+			<label class="font-weight-bold" for="Answer"> Answer </label>
+			<input type="text" id="Answer" class="form-control" placeholder="Enter your answer">
+		</div>
+		<br>
+		<!-- Favorite Programming Languages -->
+		<div class="form-check-inline">
+			<label class="form-check-label">
+				<input type="checkbox" class="form-check-input" value="">C
+			</label>
+		</div>
+		<div class="form-check-inline">
+			<label class="form-check-label">
+				<input type="checkbox" class="form-check-input" value="">C++
+			</label>
+		</div>
+		<div class="form-check-inline">
+			<label class="form-check-label">
+				<input type="checkbox" class="form-check-input" value="">Python
+			</label>
+		</div>
+		<div class="form-check-inline">
+			<label class="form-check-label">
+				<input type="checkbox" class="form-check-input" value="">Java
+			</label>
+		</div>
+		<div class="form-check-inline">
+			<label class="form-check-label">
+				<input type="checkbox" class="form-check-input" value="">Have Not Coded Before
+			</label>
+		</div>
+		<br><br>
+		<p class="font-weight-bold"> Additional Information </p>
+		<div class="form-group">
+			<label for="comment"> About me </label>
+			<textarea class="form-control" rows="5" id="comment"></textarea>
+		</div>
+		<br>
+		<button type="submit" class="btn btn-success"> Submit </button>
+	</div>
+	<br><br>
+</body>
+</html>
