@@ -162,7 +162,64 @@ The method should do all the things as stated in rule 2.
 
 */
 function play() {
-	
+	//Check if the game has started
+	if(!started){
+		alert("The game has not started yet.");
+		return;
+	}
+	var moves = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"];
+	var valid_move = false;
+	var play_move; //Variable to store location on grid
+	for(var i = 0; i < moves.length; i++)
+	{
+		if(moves[i] == document.getElementById("move_text_id").value){
+			valid_move = true; //Validate move
+		}
+	}
+	if(valid_move){
+		//Insert Move
+		play_move = document.getElementById("move_text_id").value;
+		if(whose_move() == 1){
+			//Check if spot has been filled
+			if(document.getElementById(play_move).innerHTML == 'X' || document.getElementById(play_move).innerHTML == 'O'){
+				alert("This spot has already been filled");
+				return;
+			}
+			//Fill spot
+			document.getElementById(play_move) = 'X';
+			toggle_move();
+			document.getElementById("turn_info").innerHTML = "Turn for: <b> O </b>";
+
+			//Update game status
+			for(var i = 0; i < moves.length; i++){
+				if(play_move == moves[i]){
+					board_state[i] = whose_move();
+				}
+			}
+		}
+		else{
+			//Check if spot has been filled
+			if(document.getElementById(play_move).innerHTML == 'X' || document.getElementById(play_move).innerHTML == 'O'){
+				alert("This spot has already been filled");
+				return;
+			}
+			//Fill spot
+			document.getElementById(play_move) = 'O';
+			toggle_move();
+			document.getElementById("turn_info").innerHTML = "Turn for: <b> X </b>";
+
+			//Update game status
+			for(var i = 0; i < moves.length(); i++){
+				if(play_move == moves[i]){
+					board_state[i] = whose_move();
+				}
+			}
+		}
+	}
+	else{
+		alert("Please enter a valid move.");
+	}
+
 }
 
 /*
