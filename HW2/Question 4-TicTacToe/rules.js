@@ -88,7 +88,23 @@ The method should do all the validations as stated in rule 1.
 */
 
 function begin_play(){
+	var player1_id = document.getElementById("player1_id").value;
+	var player2_id = document.getElementById("player2_id").value;
+	console.log(player1_id);
+	console.log(player2_id);
 
+	if (isEmpty(player1_id) || isEmpty(player2_id)) {
+		alert("Please enter your name");
+		return;
+	}
+	else{
+		console.log("Test");
+		document.getElementById("player1_id").value += " (X)";
+		document.getElementById("player1_id").disabled = true;
+		document.getElementById("player2_id").value += " (O)";
+		document.getElementById("player2_id").disabled = true;
+		started = true;
+	}
 }
 
 /*

@@ -6,10 +6,10 @@ function calC(c) {
     document.getElementById('panel').value += c;
     You need to convert the line above to JQuery.
     If you are writing more than a couple of lines of code, something is off. Check the reference links again
-    */       
-    document.getElementById("panel").value += c;
-    console.log(c);
-   
+    */ 
+    $("#panel").val(function(index, currentvalue){
+        return currentvalue + c;
+    });
     
 }
 function CE() {
@@ -21,6 +21,9 @@ function CE() {
     You need to convert the line above to JQuery.
     If you are writing more than a couple of lines of code, something is off. Check the reference links again
     */      
+    $("#panel").val(function(index, currentvalue){
+        return currentvalue = 0;
+    })
 
 }
 
