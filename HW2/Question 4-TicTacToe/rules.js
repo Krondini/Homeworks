@@ -104,6 +104,8 @@ function begin_play(){
 		document.getElementById("player2_id").value += " (O)";
 		document.getElementById("player2_id").disabled = true;
 		started = true;
+
+		document.getElementById("turn_info").innerHTML = "Turn for: <b> X </b>";
 	}
 }
 
@@ -119,7 +121,28 @@ Remember to set the strated flag as false
 
 */
 function reset_play(){
+	/* Part 1 */
+	document.getElementById("player1_id").value = "";
+	document.getElementById("player2_id").value = "";
+	document.getElementById("turn_info").innerHTML = "Game has not begin.";
+	document.getElementById("move_text_id").value = "";
 
+	/* Part 2 */
+	document.getElementById("player1_id").disabled = false;
+	document.getElementById("player2_id").disabled = false;
+
+	/* Part 3 */
+	document.getElementById("A1").innerHTML = "A1";
+	document.getElementById("A2").innerHTML = "A2";
+	document.getElementById("A3").innerHTML = "A3";		
+	document.getElementById("B1").innerHTML = "B1";
+	document.getElementById("B2").innerHTML = "B2";
+	document.getElementById("B3").innerHTML = "B3";
+	document.getElementById("C1").innerHTML = "C1";
+	document.getElementById("C2").innerHTML = "C2";
+	document.getElementById("C3").innerHTML = "C3";
+
+	this.started = false;
 }
 
 /*
