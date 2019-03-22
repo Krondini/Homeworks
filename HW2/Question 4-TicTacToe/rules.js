@@ -220,6 +220,101 @@ function play() {
 		alert("Please enter a valid move.");
 	}
 
+	//Validate board state
+	//Rows
+	if((board_state[0] == board_state[1]) && (board_state[0] == board_state[2]) && board_state[0] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+	if((board_state[3] == board_state[4]) && (board_state[3] == board_state[5]) && board_state[3] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+	if((board_state[6] == board_state[7]) && (board_state[6] == board_state[8]) && board_state[6] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+
+	//Columns
+	if((board_state[0] == board_state[3]) && (board_state[0] == board_state[6]) && board_state[0] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+	if((board_state[1] == board_state[4]) && (board_state[1] == board_state[7]) && board_state[1] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+	if((board_state[2] == board_state[5]) && (board_state[2] == board_state[8]) && board_state[2] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+
+	//Diagonals
+	if((board_state[2] == board_state[4]) && (board_state[2] == board_state[6]) && board_state[2] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+	if((board_state[0] == board_state[4]) && (board_state[0] == board_state[8]) && board_state[0] != -1){
+		//Declare winner
+		if(document.getElementById(play_move).innerHTML == 'X'){
+			alert("The winner is X!");
+			reset_play();
+		}
+		else{
+			alert("The winner is O!");
+			reset_play();
+		}
+	}
+
 }
 
 /*
