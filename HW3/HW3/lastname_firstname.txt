@@ -91,15 +91,32 @@ ORDER BY (unit_price * units_in_stock) ASC;
 										put result here	(output of the table)	
 
 ---------------------------------------- Question 5 Query ---------------------------------------- 
-SELECT ship_country, 
+SELECT ship_country, COUNT(ship_country)
+FROM orders WHERE (ship_country != 'USA' AND EXTRACT(YEAR FROM shipped_date) = '1996' AND EXTRACT(MONTH FROM shipped_date) = '8')
+GROUP BY ship_country
+ORDER BY count;
 										put query here
 
 ---------------------------------------- Question 5 Results ---------------------------------------- 					
-
+ ship_country | count 
+--------------+-------
+ Brazil       |     1
+ Finland      |     1
+ Italy        |     1
+ Mexico       |     1
+ UK           |     1
+ Venezuela    |     2
+ Spain        |     2
+ France       |     2
+ Sweden       |     2
+ Germany      |     7
+(10 rows)
 										put result here	(output of the table)	
 
 ---------------------------------------- Question 6 Query ---------------------------------------- 
-
+SELECT customer_id, COUNT(customer_id) FROM orders 
+WHERE count < 4
+GROUP BY customer_id;
 										put query here
 
 ---------------------------------------- Question 6 Results ---------------------------------------- 					
