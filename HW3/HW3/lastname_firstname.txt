@@ -161,7 +161,16 @@ ORDER BY customer_id DESC;
 										put result here	(output of the table)	
 
 ---------------------------------------- Question 10 Query ---------------------------------------- 
-
+DROP TABLE IF EXISTS top_items;
+CREATE TABLE top_items (
+	item_id INTEGER,
+	item_code INTEGER,
+	item_name VARCHAR(40),
+	inventory_date DATE,
+	supplier_id INTEGER,
+	item_quantity INTEGER,
+	item_price DECIMAL(9,2)
+);
 										put query here
 	
 ---------------------------------------- Question 11 Query ---------------------------------------- 
@@ -169,19 +178,23 @@ ORDER BY customer_id DESC;
 										put query here
 
 ---------------------------------------- Question 12 Query ---------------------------------------- 
-
+DELETE FROM top_items
+WHERE item_quantity < 50;
 										put query here
 
 ---------------------------------------- Question 13 Query ---------------------------------------- 
-
+ALTER TABLE top_items
+ADD COLUMN inventory_value DECIMAL(9,2)
+SET DEFAULT 0;
 										put query here
 
 ---------------------------------------- Question 14 Query ---------------------------------------- 
-
+UPDATE top_items
+SET inventory_value = item_price * item_quantity;
 										put query here
 
 ---------------------------------------- Question 15 Query ---------------------------------------- 
-
+DROP TABLE IF EXISTS top_items;
 										put query here
 
 
