@@ -137,7 +137,6 @@ ORDER BY customer_id DESC;
 										put result here	(output of the table)	
 
 ---------------------------------------- Question 7 Query ---------------------------------------- 
-Test
 										put query here
 
 ---------------------------------------- Question 7 Results ---------------------------------------- 					
