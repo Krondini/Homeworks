@@ -116,11 +116,24 @@ ORDER BY count;
 ---------------------------------------- Question 6 Query ---------------------------------------- 
 SELECT customer_id, COUNT(customer_id) AS id_count FROM orders 
 GROUP BY customer_id
-WHERE id_count < 4;
+HAVING COUNT(customer_id) < 4
+ORDER BY customer_id DESC;
 										put query here
 
 ---------------------------------------- Question 6 Results ---------------------------------------- 					
-
+ customer_id | id_count 
+-------------+----------
+ TRAIH       |        3
+ THECR       |        3
+ NORTS       |        3
+ LAZYK       |        2
+ LAUGB       |        3
+ GROSR       |        2
+ FRANR       |        3
+ CONSH       |        3
+ CENTC       |        1
+ BOLID       |        3
+(10 rows)
 										put result here	(output of the table)	
 
 ---------------------------------------- Question 7 Query ---------------------------------------- 
