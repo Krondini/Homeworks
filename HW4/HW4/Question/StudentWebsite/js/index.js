@@ -16,9 +16,12 @@ $(document).ready(function() {
                 var temperature = null;
                 // TODO
                 // Fill in the RHS of the below line and uncomment it. Remember how we accessed the temperature in Lab 9.
-                // var temperature = 
-
-                console.log(temperature);
+                //temperature = data.currently.apparentTemperature;
+                //temperature = 35;
+                var curr_state = $('#outlines')[1];
+                console.log(curr_state);
+                temperature = $('')
+                console.log("The current temperature is: " + temperature);
 
                 //TODO 
                 // Default color gray
@@ -28,8 +31,27 @@ $(document).ready(function() {
                 // Between 31 and 50 should be green
                 // Between 51 and 80 should be orange
                 // Greater than 80 should be red
-
-                $('#CO').css("fill", "blue");   // Example on how to fill colors for your state.    
+                if(temperature <= 10)
+                {
+                    $('#CO').css("fill", "blue");
+                }
+                else if(temperature >= 11 && temperature <= 30)
+                {
+                    $('#CO').css("fill", "cyan");
+                }
+                else if(temperature >= 31 && temperature <= 50)
+                {
+                    $('#CO').css("fill", "green");
+                }
+                else if(temperature >= 51 && temperature <= 80)
+                {
+                    $('#CO').css("fill", "orange");
+                }
+                else if (temperature > 80)
+                {
+                    $('#CO').css("fill", "red");                    
+                }
+               // $('#CO').css("fill", "blue");   // Example on how to fill colors for your state.    
                 
     });
 });
