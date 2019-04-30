@@ -40,9 +40,25 @@ $(document).ready(function() {
                 // Between 51 and 80 should be orange
                 // Greater than 80 should be red                
                 
-                if(temperature >= 10)
+                if(temperature <= 10)
                 {
-                    
+                    $('#'+i).css({fill: 'blue'});
+                }
+                else if(temperature > 10 && temperature <= 30)
+                {
+                    $('#'+i).css({fill: 'cyan'});
+                }
+                else if(temperature > 30 && temperature <= 50)
+                {
+                    $('#'+i).css({fill: 'green'});
+                }
+                else if(temperature > 50 && temperature <= 80)
+                {
+                    $('#'+i).css({fill: 'orange'});
+                }
+                else
+                {
+                    $('#'+i).css({fill: 'red'});
                 }
 
             });
